@@ -10,3 +10,4 @@ nohup.log
 .cache/
 static/storage
 lib
+build/
