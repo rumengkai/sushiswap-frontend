@@ -14,8 +14,8 @@ import useAllStakedValue, {
   StakedValue,
 } from '../../../hooks/useAllStakedValue'
 import useFarms from '../../../hooks/useFarms'
-import useSushi from '../../../hooks/useSushi'
-import { getEarned, getMasterChefContract } from '../../../sushi/utils'
+import useKbar from '../../../hooks/useKbar'
+import { getEarned, getMasterChefContract } from '../../../kbar/utils'
 import { bnToDec } from '../../../utils'
 
 interface FarmWithStakedValue extends Farm, StakedValue {
@@ -27,17 +27,17 @@ const FarmCards: React.FC = () => {
   const { account } = useWallet()
   const stakedValue = useAllStakedValue()
 
-  const sushiIndex = farms.findIndex(
+  const kbarIndex = farms.findIndex(
     ({ tokenSymbol }) => tokenSymbol === 'KBAR',
   )
 
-  const sushiPrice =
-    sushiIndex >= 0 && stakedValue[sushiIndex]
-      ? stakedValue[sushiIndex].tokenPriceInWeth
+  const kbarPrice =
+    kbarIndex >= 0 && stakedValue[kbarIndex]
+      ? stakedValue[kbarIndex].tokenPriceInWeth
       : new BigNumber(0)
 
   const BLOCKS_PER_YEAR = new BigNumber(2336000)
-  const SUSHI_PER_BLOCK = new BigNumber(1000)
+  const KBAR_PER_BLOCK = new BigNumber(1000)
 
   const rows = farms.reduce<FarmWithStakedValue[][]>(
     (farmRows, farm, i) => {
@@ -45,8 +45,8 @@ const FarmCards: React.FC = () => {
         ...farm,
         ...stakedValue[i],
         apy: stakedValue[i]
-          ? sushiPrice
-            .times(SUSHI_PER_BLOCK)
+          ? kbarPrice
+            .times(KBAR_PER_BLOCK)
             .times(BLOCKS_PER_YEAR)
             .times(stakedValue[i].poolWeight)
             .div(stakedValue[i].totalWethValue)
@@ -95,7 +95,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
 
   const { account } = useWallet()
   const { lpTokenAddress } = farm
-  const sushi = useSushi()
+  const kbar = useKbar()
 
   const renderer = (countdownProps: CountdownRenderProps) => {
     const { hours, minutes, seconds } = countdownProps
@@ -111,18 +111,18 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
 
   useEffect(() => {
     async function fetchEarned() {
-      if (sushi) return
+      if (kbar) return
       const earned = await getEarned(
-        getMasterChefContract(sushi),
+        getMasterChefContract(kbar),
         lpTokenAddress,
         account,
       )
       setHarvestable(bnToDec(earned))
     }
-    if (sushi && account) {
+    if (kbar && account) {
       fetchEarned()
     }
-  }, [sushi, lpTokenAddress, account, setHarvestable])
+  }, [kbar, lpTokenAddress, account, setHarvestable])
 
   const poolActive = true // startTime * 1000 - Date.now() <= 0
 

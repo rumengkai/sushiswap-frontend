@@ -13,26 +13,26 @@ const GAS_LIMIT = {
   },
 }
 
-export const getMasterChefAddress = (sushi) => {
-  return sushi && sushi.masterChefAddress
+export const getMasterChefAddress = (kbar) => {
+  return kbar && kbar.masterChefAddress
 }
-export const getSushiAddress = (sushi) => {
-  return sushi && sushi.sushiAddress
+export const getKbarAddress = (kbar) => {
+  return kbar && kbar.kbarAddress
 }
-export const getWethContract = (sushi) => {
-  return sushi && sushi.contracts && sushi.contracts.weth
-}
-
-export const getMasterChefContract = (sushi) => {
-  return sushi && sushi.contracts && sushi.contracts.masterChef
-}
-export const getSushiContract = (sushi) => {
-  return sushi && sushi.contracts && sushi.contracts.sushi
+export const getWethContract = (kbar) => {
+  return kbar && kbar.contracts && kbar.contracts.weth
 }
 
-export const getFarms = (sushi) => {
-  return sushi
-    ? sushi.contracts.pools.map(
+export const getMasterChefContract = (kbar) => {
+  return kbar && kbar.contracts && kbar.contracts.masterChef
+}
+export const getKbarContract = (kbar) => {
+  return kbar && kbar.contracts && kbar.contracts.kbar
+}
+
+export const getFarms = (kbar) => {
+  return kbar
+    ? kbar.contracts.pools.map(
         ({
           pid,
           name,
@@ -53,8 +53,8 @@ export const getFarms = (sushi) => {
           tokenAddress,
           tokenSymbol,
           tokenContract,
-          earnToken: 'sushi',
-          earnTokenAddress: sushi.contracts.sushi.options.address,
+          earnToken: 'kbar',
+          earnTokenAddress: kbar.contracts.sushi.options.address,
           icon,
         }),
       )
@@ -123,8 +123,8 @@ export const approve = async (lpContract, masterChefContract, account) => {
     .send({ from: account })
 }
 
-export const getSushiSupply = async (sushi) => {
-  return new BigNumber(await sushi.contracts.sushi.methods.totalSupply().call())
+export const getKbarSupply = async (kbar) => {
+  return new BigNumber(await kbar.contracts.kbar.methods.totalSupply().call())
 }
 
 export const stake = async (masterChefContract, pid, amount, account) => {

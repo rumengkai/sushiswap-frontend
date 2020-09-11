@@ -13,11 +13,11 @@ import WalletProviderModal from '../../components/WalletProviderModal'
 
 import useModal from '../../hooks/useModal'
 
-import useSushi from '../../hooks/useSushi'
+import useKbar from '../../hooks/useKbar'
 import useFarm from '../../hooks/useFarm'
 import useRedeem from '../../hooks/useRedeem'
 import { getContract } from '../../utils/erc20'
-import { getMasterChefContract } from '../../sushi/utils'
+import { getMasterChefContract } from '../../kbar/utils'
 
 import Harvest from './components/Harvest'
 import Stake from './components/Stake'
@@ -30,14 +30,14 @@ const Farm: React.FC = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const sushi = useSushi()
+  const kbar = useKbar()
   const { ethereum } = useWallet()
 
   // const lpContract = useMemo(() => {
   //   return getContract(ethereum as provider, lpTokenAddress)
   // }, [ethereum, lpTokenAddress])
 
-  // const { onRedeem } = useRedeem(getMasterChefContract(sushi))
+  // const { onRedeem } = useRedeem(getMasterChefContract(kbar))
 
   // const lpTokenName = useMemo(() => {
   //   return lpToken.toUpperCase()
@@ -53,8 +53,8 @@ const Farm: React.FC = () => {
         <>
           <PageHeader
             icon={<img src={chef} height="120" />}
-            title="Stake Sushi Tokens & Earn Fees"
-            subtitle="0.05% of all SushiSwap trades are rewarded to KBAR stakers"
+            title="Stake Kbar Tokens & Earn Fees"
+            subtitle="0.05% of all KbarSwap trades are rewarded to KBAR stakers"
           />
           {/* <FarmCards /> */}
           <div>TBD</div>

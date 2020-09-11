@@ -8,13 +8,13 @@ import CardContent from '../../../components/CardContent'
 import Label from '../../../components/Label'
 import Spacer from '../../../components/Spacer'
 import Value from '../../../components/Value'
-import SushiIcon from '../../../components/SushiIcon'
+import KbarIcon from '../../../components/KbarIcon'
 import useAllEarnings from '../../../hooks/useAllEarnings'
 import useAllStakedValue from '../../../hooks/useAllStakedValue'
 import useFarms from '../../../hooks/useFarms'
 import useTokenBalance from '../../../hooks/useTokenBalance'
-import useSushi from '../../../hooks/useSushi'
-import { getSushiAddress, getSushiSupply } from '../../../sushi/utils'
+import useKbar from '../../../hooks/useKbar'
+import { getKbarAddress, getKbarSupply } from '../../../kbar/utils'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 
 const PendingRewards: React.FC = () => {
@@ -71,19 +71,19 @@ const PendingRewards: React.FC = () => {
 
 const Balances: React.FC = () => {
   const [totalSupply, setTotalSupply] = useState<BigNumber>()
-  const sushi = useSushi()
-  const sushiBalance = useTokenBalance(getSushiAddress(sushi))
+  const kbar = useKbar()
+  const kbarBalance = useTokenBalance(getKbarAddress(kbar))
   const { account, ethereum }: { account: any; ethereum: any } = useWallet()
 
   useEffect(() => {
     async function fetchTotalSupply() {
-      const supply = await getSushiSupply(sushi)
+      const supply = await getKbarSupply(kbar)
       setTotalSupply(supply)
     }
-    if (sushi) {
+    if (kbar) {
       fetchTotalSupply()
     }
-  }, [sushi, setTotalSupply])
+  }, [kbar, setTotalSupply])
 
   return (
     <StyledWrapper>
@@ -91,13 +91,13 @@ const Balances: React.FC = () => {
         <CardContent>
           <StyledBalances>
             <StyledBalance>
-              <SushiIcon />
+              <KbarIcon />
               <Spacer />
               <div style={{ flex: 1 }}>
                 {/* <Label text="Your KBAR Balance" /> */}
                 <Label text="Your KBAR Balance" />
                 <Value
-                  value={!!account ? getBalanceNumber(sushiBalance) : 'Locked'}
+                  value={!!account ? getBalanceNumber(kbarBalance) : 'Locked'}
                 />
               </div>
             </StyledBalance>

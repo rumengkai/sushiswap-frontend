@@ -2,8 +2,8 @@ import React, { useCallback } from 'react'
 import styled from 'styled-components'
 import { useWallet } from 'use-wallet'
 import useTokenBalance from '../../../hooks/useTokenBalance'
-import useSushi from '../../../hooks/useSushi'
-import { getSushiAddress } from '../../../sushi/utils'
+import useKbar from '../../../hooks/useKbar'
+import { getKbarAddress } from '../../../kbar/utils'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 import Button from '../../Button'
 import CardIcon from '../../CardIcon'
@@ -23,8 +23,8 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
     reset()
   }, [onDismiss, reset])
 
-  const sushi = useSushi()
-  const sushiBalance = useTokenBalance(getSushiAddress(sushi))
+  const kbar = useKbar()
+  const kbarBalance = useTokenBalance(getKbarAddress(kbar))
 
   return (
     <Modal>
@@ -38,7 +38,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
               <span>🍣</span>
             </CardIcon>
             <StyledBalance>
-              <Value value={getBalanceNumber(sushiBalance)} />
+              <Value value={getBalanceNumber(kbarBalance)} />
               <Label text="KBAR Balance" />
             </StyledBalance>
           </StyledBalanceWrapper>
