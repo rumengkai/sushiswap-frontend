@@ -9,7 +9,6 @@ mip_front.iml
 nohup.log
 .cache/
 static/storage
-lib
 build/
 .git
 
