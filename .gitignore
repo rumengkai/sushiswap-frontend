@@ -11,5 +11,6 @@ nohup.log
 static/storage
 lib
 build/
+.git
 
 build_spawn.sh
