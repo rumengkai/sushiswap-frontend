@@ -27,6 +27,7 @@ const useAllStakedValue = () => {
   const { account }: { account: string; ethereum: provider } = useWallet()
   const sushi = useSushi()
   const farms = getFarms(sushi)
+  console.log('farms', farms);
   const masterChefContract = getMasterChefContract(sushi)
   const wethContact = getWethContract(sushi)
   const block = useBlock()
@@ -52,7 +53,7 @@ const useAllStakedValue = () => {
           ),
       ),
     )
-
+    console.log('balances', balances);
     setBalance(balances)
   }, [account, masterChefContract, sushi])
 
@@ -61,6 +62,8 @@ const useAllStakedValue = () => {
       fetchAllStakedValue()
     }
   }, [account, block, masterChefContract, setBalance, sushi])
+
+  console.log('balances2', balances);
 
   return balances
 }

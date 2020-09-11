@@ -94,7 +94,8 @@ const Balances: React.FC = () => {
               <SushiIcon />
               <Spacer />
               <div style={{ flex: 1 }}>
-                <Label text="Your SUSHI Balance" />
+                {/* <Label text="Your KBAR Balance" /> */}
+                <Label text="Your KBAR Balance" />
                 <Value
                   value={!!account ? getBalanceNumber(sushiBalance) : 'Locked'}
                 />
@@ -105,7 +106,7 @@ const Balances: React.FC = () => {
         <Footnote>
           Pending harvest
           <FootnoteValue>
-            <PendingRewards /> SUSHI
+            <PendingRewards /> KBAR
           </FootnoteValue>
         </Footnote>
       </Card>
@@ -113,14 +114,15 @@ const Balances: React.FC = () => {
 
       <Card>
         <CardContent>
-          <Label text="Total SUSHI Supply" />
+          {/* <Label text="Total KBAR Supply" /> */}
+          <Label text="Total KBAR Supply" />
           <Value
             value={totalSupply ? getBalanceNumber(totalSupply) : 'Locked'}
           />
         </CardContent>
         <Footnote>
           New rewards per block
-          <FootnoteValue>1,000 SUSHI</FootnoteValue>
+          <FootnoteValue>1,000 KBAR</FootnoteValue>
         </Footnote>
       </Card>
     </StyledWrapper>

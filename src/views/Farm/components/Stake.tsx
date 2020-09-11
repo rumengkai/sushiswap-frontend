@@ -20,6 +20,7 @@ import useUnstake from '../../../hooks/useUnstake'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
+import chef from '../../../assets/img/chef.png'
 
 interface StakeProps {
   lpContract: Contract
@@ -73,7 +74,10 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon>👨🏻‍🍳</CardIcon>
+            {/* <CardIcon>👨🏻‍🍳</CardIcon> */}
+            <CardIcon>
+              <img src={chef} height="42" style={{ marginTop: -4 }} />
+            </CardIcon>
             <Value value={getBalanceNumber(stakedBalance)} />
             <Label text={`${tokenName} Tokens Staked`} />
           </StyledCardHeader>
@@ -85,18 +89,18 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
                 text={`Approve ${tokenName}`}
               />
             ) : (
-              <>
-                <Button
-                  disabled={stakedBalance.eq(new BigNumber(0))}
-                  text="Unstake"
-                  onClick={onPresentWithdraw}
-                />
-                <StyledActionSpacer />
-                <IconButton onClick={onPresentDeposit}>
-                  <AddIcon />
-                </IconButton>
-              </>
-            )}
+                <>
+                  <Button
+                    disabled={stakedBalance.eq(new BigNumber(0))}
+                    text="Unstake"
+                    onClick={onPresentWithdraw}
+                  />
+                  <StyledActionSpacer />
+                  <IconButton onClick={onPresentDeposit}>
+                    <AddIcon />
+                  </IconButton>
+                </>
+              )}
           </StyledCardActions>
         </StyledCardContentInner>
       </CardContent>

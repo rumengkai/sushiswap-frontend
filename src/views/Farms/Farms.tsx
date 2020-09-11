@@ -27,7 +27,7 @@ const Farms: React.FC = () => {
             <Route exact path={path}>
               <PageHeader
                 icon={<img src={chef} height="120" />}
-                subtitle="Earn SUSHI tokens by staking Uniswap V2 LP Tokens."
+                subtitle="Earn KBAR tokens by staking Uniswap V2 LP Tokens."
                 title="Select Your Favorite Dishes"
               />
               <FarmCards />
@@ -37,20 +37,20 @@ const Farms: React.FC = () => {
             </Route>
           </>
         ) : (
-          <div
-            style={{
-              alignItems: 'center',
-              display: 'flex',
-              flex: 1,
-              justifyContent: 'center',
-            }}
-          >
-            <Button
-              onClick={onPresentWalletProviderModal}
-              text="🔓 Unlock Wallet"
-            />
-          </div>
-        )}
+            <div
+              style={{
+                alignItems: 'center',
+                display: 'flex',
+                flex: 1,
+                justifyContent: 'center',
+              }}
+            >
+              <Button
+                onClick={onPresentWalletProviderModal}
+                text="🔓 Unlock Wallet"
+              />
+            </div>
+          )}
       </Page>
     </Switch>
   )

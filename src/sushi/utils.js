@@ -66,6 +66,7 @@ export const getPoolWeight = async (masterChefContract, pid) => {
   const totalAllocPoint = await masterChefContract.methods
     .totalAllocPoint()
     .call()
+  console.log('totalAllocPoint', totalAllocPoint)
   return new BigNumber(allocPoint).div(new BigNumber(totalAllocPoint))
 }
 

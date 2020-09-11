@@ -54,26 +54,26 @@ const Farm: React.FC = () => {
           <PageHeader
             icon={<img src={chef} height="120" />}
             title="Stake Sushi Tokens & Earn Fees"
-            subtitle="0.05% of all SushiSwap trades are rewarded to SUSHI stakers"
+            subtitle="0.05% of all SushiSwap trades are rewarded to KBAR stakers"
           />
           {/* <FarmCards /> */}
           <div>TBD</div>
         </>
       ) : (
-        <div
-          style={{
-            alignItems: 'center',
-            display: 'flex',
-            flex: 1,
-            justifyContent: 'center',
-          }}
-        >
-          <Button
-            onClick={onPresentWalletProviderModal}
-            text="🔓 Unlock Wallet"
-          />
-        </div>
-      )}
+          <div
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              flex: 1,
+              justifyContent: 'center',
+            }}
+          >
+            <Button
+              onClick={onPresentWalletProviderModal}
+              text="🔓 Unlock Wallet"
+            />
+          </div>
+        )}
     </Page>
   )
 }

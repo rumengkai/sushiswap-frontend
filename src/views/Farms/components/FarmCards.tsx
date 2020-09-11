@@ -28,7 +28,7 @@ const FarmCards: React.FC = () => {
   const stakedValue = useAllStakedValue()
 
   const sushiIndex = farms.findIndex(
-    ({ tokenSymbol }) => tokenSymbol === 'SUSHI',
+    ({ tokenSymbol }) => tokenSymbol === 'KBAR',
   )
 
   const sushiPrice =
@@ -46,10 +46,10 @@ const FarmCards: React.FC = () => {
         ...stakedValue[i],
         apy: stakedValue[i]
           ? sushiPrice
-              .times(SUSHI_PER_BLOCK)
-              .times(BLOCKS_PER_YEAR)
-              .times(stakedValue[i].poolWeight)
-              .div(stakedValue[i].totalWethValue)
+            .times(SUSHI_PER_BLOCK)
+            .times(BLOCKS_PER_YEAR)
+            .times(stakedValue[i].poolWeight)
+            .div(stakedValue[i].totalWethValue)
           : null,
       }
       const newFarmRows = [...farmRows]
@@ -77,10 +77,10 @@ const FarmCards: React.FC = () => {
           </StyledRow>
         ))
       ) : (
-        <StyledLoadingWrapper>
-          <Loader text="Cooking the rice ..." />
-        </StyledLoadingWrapper>
-      )}
+          <StyledLoadingWrapper>
+            <Loader text="Cooking the rice ..." />
+          </StyledLoadingWrapper>
+        )}
     </StyledCards>
   )
 }
@@ -128,7 +128,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
 
   return (
     <StyledCardWrapper>
-      {farm.tokenSymbol === 'SUSHI' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'KBAR' && <StyledCardAccent />}
       <Card>
         <CardContent>
           <StyledContent>
@@ -156,10 +156,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               <span>
                 {farm.apy
                   ? `${farm.apy
-                      .times(new BigNumber(100))
-                      .toNumber()
-                      .toLocaleString('en-US')
-                      .slice(0, -1)}%`
+                    .times(new BigNumber(100))
+                    .toNumber()
+                    .toLocaleString('en-US')
+                    .slice(0, -1)}%`
                   : 'Loading ...'}
               </span>
               {/* <span>

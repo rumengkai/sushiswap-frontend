@@ -6,16 +6,19 @@ const Nav: React.FC = () => {
     <StyledNav>
       <StyledLink
         target="_blank"
-        href="https://etherscan.io/address/0xc2edad668740f1aa35e4d8f227fb8e17dca888cd#code"
+        // href="https://etherscan.io/address/0xc2edad668740f1aa35e4d8f227fb8e17dca888cd#code"
+        // href="https://etherscan.io/address/0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d#code"
+        href="https://etherscan.io/address/0x2a0f367384dbb0b36037872a0ac2749f80098734#code"
       >
-        MasterChef Contract
+        KbarSwap Contract
       </StyledLink>
-      <StyledLink
+      {/* <StyledLink
         target="_blank"
-        href="https://uniswap.info/pair/0xce84867c3c02b05dc570d0135103d3fb9cc19433"
+        // href="https://uniswap.info/pair/0xce84867c3c02b05dc570d0135103d3fb9cc19433"
+        href="https://uniswap.info/pair/0x451c2220a761dc5759e5c6d17bd28a568318a26b"
       >
-        Uniswap SUSHI-ETH
-      </StyledLink>
+        Uniswap KBAR-ETH
+      </StyledLink> */}
       <StyledLink target="_blank" href="https://discord.gg/hJ2p555">
         Discord
       </StyledLink>
@@ -23,7 +26,10 @@ const Nav: React.FC = () => {
         Github
       </StyledLink>
       <StyledLink target="_blank" href="https://twitter.com/sushiswap">
-        Twitter
+        Medium
+      </StyledLink>
+      <StyledLink target="_blank" href="#">
+        Kakao
       </StyledLink>
     </StyledNav>
   )
