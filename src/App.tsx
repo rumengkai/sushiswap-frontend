@@ -52,13 +52,13 @@ const Providers: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <UseWalletProvider
-        chainId={1}
+        chainId={3}
         connectors={{
-          walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
+          // walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
           // walletconnect: { rpcUrl: 'https://ropsten.eth.aragon.network/' },
           // walletconnect: { rpcUrl: 'https://rinkeby.eth.aragon.network/' },
           // walletconnect: { rpcUrl: 'https://faucet.ropsten.be/' },
-          // walletconnect: { rpcUrl: 'https://api.infura.io/v1/jsonrpc/ropsten' },
+          walletconnect: { rpcUrl: 'https://api.infura.io/v1/jsonrpc/ropsten' },
         }}
       >
         <KbarProvider>
