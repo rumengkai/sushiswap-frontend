@@ -154,7 +154,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <StyledInsight>
               <span>APY</span>
               <span>
-                {farm.apy
+                {farm && farm.apy
                   ? `${farm.apy
                     .times(new BigNumber(100))
                     .toNumber()
@@ -282,6 +282,7 @@ const StyledDetail = styled.div`
 `
 
 const StyledInsight = styled.div`
+  max-width:250px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;

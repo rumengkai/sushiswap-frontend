@@ -27,7 +27,6 @@ const useAllStakedValue = () => {
   const { account }: { account: string; ethereum: provider } = useWallet()
   const kbar = useKbar()
   const farms = getFarms(kbar)
-  console.log('farms', farms);
   const masterChefContract = getMasterChefContract(kbar)
   const wethContact = getWethContract(kbar)
   const block = useBlock()
@@ -54,7 +53,6 @@ const useAllStakedValue = () => {
         },
       ),
     )
-    console.log('balances', balances);
     setBalance(balances)
   }, [account, masterChefContract, kbar])
 

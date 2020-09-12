@@ -53,9 +53,9 @@ const StyledTitleSpan = styled.h1`
   font-weight: 700;
   margin-right:10px;
   line-height: 80px;
-  display:inline-block;
+  display: inline-block;
 `
-const StyledTitle = styled.h1`
+const StyledTitle = styled.div`
   /* font-family: 'Kaushan Script', sans-serif; */
   color: ${(props) => props.theme.color.grey[600]};
   font-size: 36px;

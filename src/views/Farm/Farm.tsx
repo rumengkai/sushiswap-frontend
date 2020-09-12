@@ -15,7 +15,6 @@ import Stake from './components/Stake'
 
 const Farm: React.FC = () => {
   const { farmId } = useParams()
-  console.log('farmId', farmId);
   const {
     pid,
     lpToken,
@@ -33,9 +32,6 @@ const Farm: React.FC = () => {
     name: '',
     icon: '',
   }
-
-
-  console.log("pid:", pid);
 
   useEffect(() => {
     window.scrollTo(0, 0)
