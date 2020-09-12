@@ -48,13 +48,13 @@ export const addressMap = {
 
 export const contractAddresses = {
   kbar: {
-    1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
-    // 1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
+    // 1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
+    1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
     3: '0x18fb693b0cc7ddcf0cb71ffbe5432af647870f5d',
   },
   masterChef: {
-    1: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd',
-    // 1: '0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d',
+    // 1: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd',
+    1: '0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d',
     3: '0x2a0f367384dbb0b36037872a0ac2749f80098734',
   },
   weth: {
@@ -90,8 +90,8 @@ export const supportedPools = [
       3: '0x0c35ed36859e35655c7c32382445600237e34f35',
     },
     tokenAddresses: {
-      1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
-      // 1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
+      // 1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
+      1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
       3: '0x18fb693b0cc7ddcf0cb71ffbe5432af647870f5d',
     },
     name: 'KBAR Party!',
@@ -99,110 +99,126 @@ export const supportedPools = [
     tokenSymbol: 'KBAR',
     icon: '🍾',
   },
-  // {
-  //   pid: 0,
-  //   lpAddresses: {
-  //     1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0xdac17f958d2ee523a2206206994597c13d831ec7',
-  //   },
-  //   name: 'Tether Turtle',
-  //   symbol: 'USDT-ETH UNI-V2 LP',
-  //   tokenSymbol: 'USDT',
-  //   icon: '🍶',
-  // },
-  // {
-  //   pid: 1,
-  //   lpAddresses: {
-  //     1: '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
-  //   },
-  //   name: 'Circle Snail',
-  //   symbol: 'USDC-ETH UNI-V2 LP',
-  //   tokenSymbol: 'USDC',
-  //   icon: '🍺',
-  // },
-  // {
-  //   pid: 2,
-  //   lpAddresses: {
-  //     1: '0xa478c2975ab1ea89e8196811f51a7b7ade33eb11',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0x6b175474e89094c44da98b954eedeac495271d0f',
-  //   },
-  //   name: 'Donald DAI',
-  //   symbol: 'DAI-ETH UNI-V2 LP',
-  //   tokenSymbol: 'DAI',
-  //   icon: '🍻',
-  // },
-  // {
-  //   pid: 3,
-  //   lpAddresses: {
-  //     1: '0xf80758ab42c3b07da84053fd88804bcb6baa4b5c',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0x57ab1ec28d129707052df4df418d58a2d46d5f51',
-  //   },
-  //   name: 'Spartan Dollar',
-  //   symbol: 'SUSD-ETH UNI-V2 LP',
-  //   tokenSymbol: 'SUSD',
-  //   icon: '🥂',
-  // },
-  // {
-  //   pid: 7,
-  //   lpAddresses: {
-  //     1: '0x88d97d199b9ed37c29d846d00d443de980832a22',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0x04fa0d235c4abf4bcf4787af4cf447de572ef828',
-  //   },
-  //   name: 'Umami Squid',
-  //   symbol: 'UMA-ETH UNI-V2 LP',
-  //   tokenSymbol: 'UMA',
-  //   icon: '🍷',
-  // },
-  // {
-  //   pid: 9,
-  //   lpAddresses: {
-  //     1: '0xf421c3f2e695c2d4c0765379ccace8ade4a480d9',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0xba11d00c5f74255f56a5e366f4f77f5a186d7f55',
-  //   },
-  //   name: 'Band-osaurus',
-  //   symbol: 'BAND-ETH UNI-V2 LP',
-  //   tokenSymbol: 'BAND',
-  //   icon: '🥃',
-  // },
-  // {
-  //   pid: 8,
-  //   lpAddresses: {
-  //     1: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0x514910771af9ca656af840dff83e8264ecf986ca',
-  //   },
-  //   name: 'Toadie Marine',
-  //   symbol: 'LINK-ETH UNI-V2 LP',
-  //   tokenSymbol: 'LINK',
-  //   icon: '🍸',
-  // },
-  // {
-  //   pid: 10,
-  //   lpAddresses: {
-  //     1: '0xc5be99a02c6857f9eac67bbce58df5572498f40c',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0xd46ba6d942050d489dbd938a2c909a5d5039a161',
-  //   },
-  //   name: 'Ample Chicks',
-  //   symbol: 'AMPL-ETH UNI-V2 LP',
-  //   tokenSymbol: 'AMPL',
-  //   icon: '🍹',
-  // },
+  {
+    pid: 0,
+    lpAddresses: {
+      1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
+      3: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
+    },
+    tokenAddresses: {
+      1: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+      3: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+    },
+    name: 'Tether Soju',
+    symbol: 'USDT-ETH UNI-V2 LP',
+    tokenSymbol: 'USDT',
+    icon: '🍶',
+  },
+  {
+    pid: 1,
+    lpAddresses: {
+      1: '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc',
+      3: '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc',
+    },
+    tokenAddresses: {
+      1: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+      3: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+    },
+    name: 'Circle Beer',
+    symbol: 'USDC-ETH UNI-V2 LP',
+    tokenSymbol: 'USDC',
+    icon: '🍺',
+  },
+  {
+    pid: 2,
+    lpAddresses: {
+      1: '0xa478c2975ab1ea89e8196811f51a7b7ade33eb11',
+      3: '0xa478c2975ab1ea89e8196811f51a7b7ade33eb11',
+    },
+    tokenAddresses: {
+      1: '0x6b175474e89094c44da98b954eedeac495271d0f',
+      3: '0x6b175474e89094c44da98b954eedeac495271d0f',
+    },
+    name: 'Donald DAI',
+    symbol: 'DAI-ETH UNI-V2 LP',
+    tokenSymbol: 'DAI',
+    icon: '🍻',
+  },
+  {
+    pid: 3,
+    lpAddresses: {
+      1: '0xf80758ab42c3b07da84053fd88804bcb6baa4b5c',
+      3: '0xf80758ab42c3b07da84053fd88804bcb6baa4b5c',
+    },
+    tokenAddresses: {
+      1: '0x57ab1ec28d129707052df4df418d58a2d46d5f51',
+      3: '0x57ab1ec28d129707052df4df418d58a2d46d5f51',
+    },
+    name: 'Spartan Dollar',
+    symbol: 'SUSD-ETH UNI-V2 LP',
+    tokenSymbol: 'SUSD',
+    icon: '🥂',
+  },
+  {
+    pid: 7,
+    lpAddresses: {
+      1: '0x88d97d199b9ed37c29d846d00d443de980832a22',
+      3: '0x88d97d199b9ed37c29d846d00d443de980832a22',
+    },
+    tokenAddresses: {
+      1: '0x04fa0d235c4abf4bcf4787af4cf447de572ef828',
+      3: '0x04fa0d235c4abf4bcf4787af4cf447de572ef828',
+    },
+    name: 'Umami Wine',
+    symbol: 'UMA-ETH UNI-V2 LP',
+    tokenSymbol: 'UMA',
+    icon: '🍷',
+  },
+  {
+    pid: 9,
+    lpAddresses: {
+      1: '0xf421c3f2e695c2d4c0765379ccace8ade4a480d9',
+      3: '0xf421c3f2e695c2d4c0765379ccace8ade4a480d9',
+    },
+    tokenAddresses: {
+      1: '0xba11d00c5f74255f56a5e366f4f77f5a186d7f55',
+      3: '0xba11d00c5f74255f56a5e366f4f77f5a186d7f55',
+    },
+    name: 'Band-osaurus',
+    symbol: 'BAND-ETH UNI-V2 LP',
+    tokenSymbol: 'BAND',
+    icon: '🥃',
+  },
+  {
+    pid: 8,
+    lpAddresses: {
+      1: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974',
+      3: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974',
+    },
+    tokenAddresses: {
+      1: '0x514910771af9ca656af840dff83e8264ecf986ca',
+      3: '0x514910771af9ca656af840dff83e8264ecf986ca',
+    },
+    name: 'Toadie Cocktail',
+    symbol: 'LINK-ETH UNI-V2 LP',
+    tokenSymbol: 'LINK',
+    icon: '🍸',
+  },
+  {
+    pid: 10,
+    lpAddresses: {
+      1: '0xc5be99a02c6857f9eac67bbce58df5572498f40c',
+      3: '0xc5be99a02c6857f9eac67bbce58df5572498f40c',
+    },
+    tokenAddresses: {
+      1: '0xd46ba6d942050d489dbd938a2c909a5d5039a161',
+      3: '0xd46ba6d942050d489dbd938a2c909a5d5039a161',
+    },
+    name: 'Ample Chicks',
+    symbol: 'AMPL-ETH UNI-V2 LP',
+    tokenSymbol: 'AMPL',
+    icon: '🍹',
+  },
   // {
   //   pid: 4,
   //   lpAddresses: {

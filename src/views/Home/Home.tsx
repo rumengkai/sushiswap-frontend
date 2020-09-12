@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     <Page>
       <PageHeader
         icon={<img src={chef} height={120} />}
-        title="Master Sommelier is ready"
+        title="You Sommelier is ready"
         subtitle="Stake UniSwap LP tokens to claim your very own yummy KBAR!"
       />
 
@@ -22,8 +22,7 @@ const Home: React.FC = () => {
       </Container>
       <Spacer size="lg" />
       <StyledInfo>
-        🏆<b>Pro Tip</b>: KBAR-ETH UNI-V2 LP token pool yields TWICE more token
-        rewards per block.
+        🏆<b>Pro Tip</b>: KBAR-ETH UNI-V2 LP token pool yields TWICE more token rewards per block.
       </StyledInfo>
       <Spacer size="lg" />
       <div
@@ -31,7 +30,7 @@ const Home: React.FC = () => {
           margin: '0 auto',
         }}
       >
-        <Button text="🔪 See the Menu" to="/farms" variant="secondary" />
+        <Button text="🪑 See the Menu" to="/farms" variant="secondary" />
       </div>
     </Page>
   )

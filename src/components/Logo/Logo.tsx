@@ -9,7 +9,7 @@ const Logo: React.FC = () => {
       <img src={chef} height="32" style={{ marginTop: -4 }} />
       <StyledText>
         {/* KbarSwap <MasterChefText>MasterChef</MasterChefText> */}
-        KBarSwap <MasterChefText>Sommelier</MasterChefText>
+        KbarSwap <MasterChefText>Sommelier</MasterChefText>
       </StyledText>
     </StyledLogo>
   )
