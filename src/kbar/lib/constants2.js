@@ -50,12 +50,12 @@ export const contractAddresses = {
   kbar: {
     // 1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
     // 1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
-    1: '0x18fb693b0cc7ddcf0cb71ffbe5432af647870f5d',
+    1: '0x37e32026521651b33b6c66b753282d55a0b8b7f4',
   },
   masterChef: {
     // 1: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd',
     // 1: '0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d',
-    1: '0x2a0f367384dbb0b36037872a0ac2749f80098734',
+    1: '0x7180ce91e19bcc679a4bb1c7e23965ef88be5e37',
   },
   weth: {
     // 1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
@@ -92,7 +92,7 @@ export const supportedPools = [
     tokenAddresses: {
       // 1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
       // 1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
-      1: '0x18fb693b0cc7ddcf0cb71ffbe5432af647870f5d',
+      1: '0x37e32026521651b33b6c66b753282d55a0b8b7f4',
     },
     name: 'KBAR Party!',
     symbol: 'KBAR-ETH UNI-V2 LP',

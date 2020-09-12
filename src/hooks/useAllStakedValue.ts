@@ -43,14 +43,15 @@ const useAllStakedValue = () => {
           pid: number
           lpContract: Contract
           tokenContract: Contract
-        }) =>
-          getTotalLPWethValue(
+        }) => {
+          return getTotalLPWethValue(
             masterChefContract,
             wethContact,
             lpContract,
             tokenContract,
             pid,
-          ),
+          )
+        },
       ),
     )
     console.log('balances', balances);
@@ -62,8 +63,6 @@ const useAllStakedValue = () => {
       fetchAllStakedValue()
     }
   }, [account, block, masterChefContract, setBalance, kbar])
-
-  console.log('balances2', balances);
 
   return balances
 }

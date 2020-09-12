@@ -8,7 +8,7 @@ const Nav: React.FC = () => {
         target="_blank"
         // href="https://etherscan.io/address/0xc2edad668740f1aa35e4d8f227fb8e17dca888cd#code"
         // href="https://etherscan.io/address/0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d#code"
-        href="https://etherscan.io/address/0x2a0f367384dbb0b36037872a0ac2749f80098734#code"
+        href="https://etherscan.io/address/0x7180ce91e19bcc679a4bb1c7e23965ef88be5e37#code"
       >
         KbarSwap Contract
       </StyledLink>

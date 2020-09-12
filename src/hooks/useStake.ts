@@ -11,6 +11,7 @@ const useStake = (pid: number) => {
 
   const handleStake = useCallback(
     async (amount: string) => {
+      console.log('amount:',amount);
       const txHash = await stake(
         getMasterChefContract(kbar),
         pid,
@@ -21,7 +22,6 @@ const useStake = (pid: number) => {
     },
     [account, pid, kbar],
   )
-
   return { onStake: handleStake }
 }
 
