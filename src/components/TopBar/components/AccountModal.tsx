@@ -35,7 +35,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
         <div style={{ display: 'flex' }}>
           <StyledBalanceWrapper>
             <CardIcon>
-              <span>🍣</span>
+              <span>🍾</span>
             </CardIcon>
             <StyledBalance>
               <Value value={getBalanceNumber(kbarBalance)} />
