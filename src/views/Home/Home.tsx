@@ -7,8 +7,20 @@ import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
 import Spacer from '../../components/Spacer'
 import Balances from './components/Balances'
+import { timeStamp } from 'console'
 
 const Home: React.FC = () => {
+  // 是否有KBAR-ETH池子
+  const haveKBARETH = false
+  const tip = () => {
+    if (!!haveKBARETH) {
+      return (<StyledInfo>
+        🏆<b>Pro Tip</b>: KBAR-ETH UNI-V2 LP token pool yields TWICE more token rewards per block.
+      </StyledInfo>)
+    } else {
+      return null
+    }
+  }
   return (
     <Page>
       <PageHeader
@@ -21,9 +33,7 @@ const Home: React.FC = () => {
         <Balances />
       </Container>
       <Spacer size="lg" />
-      <StyledInfo>
-        🏆<b>Pro Tip</b>: KBAR-ETH UNI-V2 LP token pool yields TWICE more token rewards per block.
-      </StyledInfo>
+      {tip()}
       <Spacer size="lg" />
       <div
         style={{

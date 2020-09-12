@@ -6,7 +6,7 @@ import Button from '../../Button'
 import WalletProviderModal from '../../WalletProviderModal'
 import AccountModal from './AccountModal'
 
-interface AccountButtonProps {}
+interface AccountButtonProps { }
 
 const AccountButton: React.FC<AccountButtonProps> = (props) => {
   const [onPresentAccountModal] = useModal(<AccountModal />)
@@ -26,12 +26,21 @@ const AccountButton: React.FC<AccountButtonProps> = (props) => {
       {!account ? (
         <Button onClick={handleUnlockClick} size="sm" text="Unlock Wallet" />
       ) : (
-        <Button onClick={onPresentAccountModal} size="sm" text="My Wallet" />
-      )}
+          <Button onClick={onPresentAccountModal} size="sm" text="My Wallet" />
+        )}
     </StyledAccountButton>
   )
 }
 
-const StyledAccountButton = styled.div``
+const StyledAccountButton = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  width: 156px;
+  @media (max-width: 400px) {
+    justify-content: center;
+    width: auto;
+  }
+`
 
 export default AccountButton

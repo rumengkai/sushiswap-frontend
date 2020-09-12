@@ -56,14 +56,9 @@ const StyledNavWrapper = styled.div`
 `
 
 const StyledAccountButtonWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-  width: 156px;
-  @media (max-width: 400px) {
-    justify-content: center;
-    width: auto;
-  }
+  width:260px;
+  display:flex;
+  justify-content:flex-end;
 `
 
 const StyledMenuButton = styled.button`
