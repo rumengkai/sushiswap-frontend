@@ -4,32 +4,27 @@ import styled from 'styled-components'
 const Nav: React.FC = () => {
   return (
     <StyledNav>
+      {/* KbarSwap Contract  Github  Twitter  Medium   Telegram  Discord */}
       <StyledLink
         target="_blank"
-        // href="https://etherscan.io/address/0xc2edad668740f1aa35e4d8f227fb8e17dca888cd#code"
-        // href="https://etherscan.io/address/0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d#code"
         href="https://etherscan.io/address/0x9a870977a81c9701ebb1ac089716935edb06e832#code"
       >
         KbarSwap Contract
       </StyledLink>
-      {/* <StyledLink
-        target="_blank"
-        // href="https://uniswap.info/pair/0xce84867c3c02b05dc570d0135103d3fb9cc19433"
-        href="https://uniswap.info/pair/0x451c2220a761dc5759e5c6d17bd28a568318a26b"
-      >
-        Uniswap KBAR-ETH
-      </StyledLink> */}
-      <StyledLink target="_blank" href="https://discord.gg/hJ2p555">
-        Discord
-      </StyledLink>
       <StyledLink target="_blank" href="https://github.com/kbarswap">
         Github
+      </StyledLink>
+      <StyledLink target="_blank" href="#">
+        Twitter
       </StyledLink>
       <StyledLink target="_blank" href="https://twitter.com/kbarswap">
         Medium
       </StyledLink>
       <StyledLink target="_blank" href="#">
-        Kakao
+        Telegram
+      </StyledLink>
+      <StyledLink target="_blank" href="https://discord.gg/hJ2p555">
+        Discord
       </StyledLink>
     </StyledNav>
   )
