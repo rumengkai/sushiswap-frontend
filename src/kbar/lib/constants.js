@@ -49,11 +49,11 @@ export const addressMap = {
 export const contractAddresses = {
   kbar: {
     1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
-    3: '0xe106dc33058762bee129104e0bd325131f1abd21',
+    3: '0xd3807f2265c1004523e75b849d3552c4eb4bbe53',
   },
   masterChef: {
     1: '0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d',
-    3: '0x31f1610c2bb0ba92dff9078de41410a7361ff4c6',
+    3: '0x03810cc674c33174702254ca8ffa9ef20d8df312',
   },
   lpAddresses: {
     1: '0x66d6dcdf72125c2f6a4039567076376ec6e2f324',
@@ -82,8 +82,6 @@ UNI-V2 LP Address on mainnet for reference
 11 YFI  0x2fdbadf3c4d5a8666bc06645b8358ab803996e28
 12 KBAR 0xce84867c3c02b05dc570d0135103d3fb9cc19433
 */
-// komp token:0xd763f7111db819a86fad67f48906f5728d4dae36
-// lp token: 0xe2afa0cb17127a8744b2ef0e10e83faddead975e
 
 export const supportedPools = [
   {
@@ -105,11 +103,11 @@ export const supportedPools = [
     pid: 0,
     lpAddresses: {
       1: '0x0a24adf229e7b3271d314aa934749dd454029959',
-      3: '0xe2afa0cb17127a8744b2ef0e10e83faddead975e',
+      3: '0xe7992cfb9f8032ce8de2f0067aff9870b1ea9c6e',
     },
     tokenAddresses: {
       1: '0x8d18f76d1F87A7347A74f957052f414472945BE4',
-      3: '0xd763f7111db819a86fad67f48906f5728d4dae36',
+      3: '0xf7143858dcbb36b08fc2dbb2deb9253b4203e12a',
     },
     name: 'Kompass Soju ',
     symbol: 'KOMP-ETH UNI-V2 LP',
