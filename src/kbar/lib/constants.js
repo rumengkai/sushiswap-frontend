@@ -82,10 +82,12 @@ UNI-V2 LP Address on mainnet for reference
 11 YFI  0x2fdbadf3c4d5a8666bc06645b8358ab803996e28
 12 KBAR 0xce84867c3c02b05dc570d0135103d3fb9cc19433
 */
+// komp token:0xd763f7111db819a86fad67f48906f5728d4dae36
+// lp token: 0xe2afa0cb17127a8744b2ef0e10e83faddead975e
 
 export const supportedPools = [
   {
-    pid: 0,
+    pid: 1,
     lpAddresses: {
       1: contractAddresses.lpAddresses[1],
       3: contractAddresses.lpAddresses[3],
@@ -100,14 +102,14 @@ export const supportedPools = [
     icon: '🍾',
   },
   {
-    pid: 1,
+    pid: 0,
     lpAddresses: {
       1: '0x0a24adf229e7b3271d314aa934749dd454029959',
-      3: '0x0a24adf229e7b3271d314aa934749dd454029959',
+      3: '0xe2afa0cb17127a8744b2ef0e10e83faddead975e',
     },
     tokenAddresses: {
       1: '0x8d18f76d1F87A7347A74f957052f414472945BE4',
-      3: '0x8d18f76d1F87A7347A74f957052f414472945BE4',
+      3: '0xd763f7111db819a86fad67f48906f5728d4dae36',
     },
     name: 'Kompass Soju ',
     symbol: 'KOMP-ETH UNI-V2 LP',
