@@ -57,7 +57,7 @@ export const contractAddresses = {
   },
   lpAddresses: {
     1: '0x66d6dcdf72125c2f6a4039567076376ec6e2f324',
-    3: '0x9b7a10b4a2cc8fe614861f431beb1ebeaa83ab6b',
+    3: '0x6d830e1733e2ed28446db425a471bd2a99d13c7e',
   },
   weth: {
     1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
