@@ -49,11 +49,11 @@ export const addressMap = {
 export const contractAddresses = {
   kbar: {
     1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
-    3: '0x334be59f814b0f83104aab7d5f5c68ee146f9e97',
+    3: '0xe106dc33058762bee129104e0bd325131f1abd21',
   },
   masterChef: {
     1: '0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d',
-    3: '0x9a870977a81c9701ebb1ac089716935edb06e832',
+    3: '0x31f1610c2bb0ba92dff9078de41410a7361ff4c6',
   },
   lpAddresses: {
     1: '0x66d6dcdf72125c2f6a4039567076376ec6e2f324',
@@ -86,21 +86,21 @@ UNI-V2 LP Address on mainnet for reference
 // lp token: 0xe2afa0cb17127a8744b2ef0e10e83faddead975e
 
 export const supportedPools = [
-  {
-    pid: 1,
-    lpAddresses: {
-      1: contractAddresses.lpAddresses[1],
-      3: contractAddresses.lpAddresses[3],
-    },
-    tokenAddresses: {
-      1: contractAddresses.kbar[1],
-      3: contractAddresses.kbar[3],
-    },
-    name: 'KBAR Party!',
-    symbol: 'KBAR-ETH UNI-V2 LP',
-    tokenSymbol: 'KBAR',
-    icon: '🍾',
-  },
+  // {
+  //   pid: 1,
+  //   lpAddresses: {
+  //     1: contractAddresses.lpAddresses[1],
+  //     3: contractAddresses.lpAddresses[3],
+  //   },
+  //   tokenAddresses: {
+  //     1: contractAddresses.kbar[1],
+  //     3: contractAddresses.kbar[3],
+  //   },
+  //   name: 'KBAR Party!',
+  //   symbol: 'KBAR-ETH UNI-V2 LP',
+  //   tokenSymbol: 'KBAR',
+  //   icon: '🍾',
+  // },
   {
     pid: 0,
     lpAddresses: {
