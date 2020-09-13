@@ -57,7 +57,7 @@ export const contractAddresses = {
   },
   lpAddresses: {
     1: '0x66d6dcdf72125c2f6a4039567076376ec6e2f324',
-    3: '0x229d91ae6804b9fc6b2271f2f28fe6d4e45b6a13',
+    3: '0x9b7a10b4a2cc8fe614861f431beb1ebeaa83ab6b',
   },
   weth: {
     1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
@@ -86,21 +86,21 @@ UNI-V2 LP Address on mainnet for reference
 // lp token: 0xe2afa0cb17127a8744b2ef0e10e83faddead975e
 
 export const supportedPools = [
-  // {
-  //   pid: 1,
-  //   lpAddresses: {
-  //     1: contractAddresses.lpAddresses[1],
-  //     3: contractAddresses.lpAddresses[3],
-  //   },
-  //   tokenAddresses: {
-  //     1: contractAddresses.kbar[1],
-  //     3: contractAddresses.kbar[3],
-  //   },
-  //   name: 'KBAR Party!',
-  //   symbol: 'KBAR-ETH UNI-V2 LP',
-  //   tokenSymbol: 'KBAR',
-  //   icon: '🍾',
-  // },
+  {
+    pid: 1,
+    lpAddresses: {
+      1: contractAddresses.lpAddresses[1],
+      3: contractAddresses.lpAddresses[3],
+    },
+    tokenAddresses: {
+      1: contractAddresses.kbar[1],
+      3: contractAddresses.kbar[3],
+    },
+    name: 'KBAR Party!',
+    symbol: 'KBAR-ETH UNI-V2 LP',
+    tokenSymbol: 'KBAR',
+    icon: '🍾',
+  },
   {
     pid: 0,
     lpAddresses: {
@@ -116,21 +116,21 @@ export const supportedPools = [
     tokenSymbol: 'KOMP',
     icon: '🍶',
   },
-  {
-    pid: 12,
-    lpAddresses: {
-      1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
-      3: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
-    },
-    tokenAddresses: {
-      1: '0xdac17f958d2ee523a2206206994597c13d831ec7',
-      3: '0xdac17f958d2ee523a2206206994597c13d831ec7',
-    },
-    name: 'Tether Beer',
-    symbol: 'USDT-ETH UNI-V2 LP',
-    tokenSymbol: 'USDT',
-    icon: '🍺',
-  },
+  // {
+  //   pid: 12,
+  //   lpAddresses: {
+  //     1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
+  //     3: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
+  //   },
+  //   tokenAddresses: {
+  //     1: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+  //     3: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+  //   },
+  //   name: 'Tether Beer',
+  //   symbol: 'USDT-ETH UNI-V2 LP',
+  //   tokenSymbol: 'USDT',
+  //   icon: '🍺',
+  // },
   // {
   // {
   //   pid: 2,
