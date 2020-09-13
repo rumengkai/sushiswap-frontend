@@ -1,13 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import { contractAddresses } from '../../../kbar/lib/constants'
 
 const Nav: React.FC = () => {
+  const ContractUrl = () => {
+    return `https://etherscan.io/address/${contractAddresses.masterChef[1]}#code`
+  }
   return (
     <StyledNav>
       {/* KbarSwap Contract  Github  Twitter  Medium   Telegram  Discord */}
       <StyledLink
         target="_blank"
-        href="https://etherscan.io/address/0x9a870977a81c9701ebb1ac089716935edb06e832#code"
+        href={ContractUrl()}
       >
         KbarSwap Contract
       </StyledLink>
