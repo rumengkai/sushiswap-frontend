@@ -4,7 +4,7 @@ import { contractAddresses } from '../../../kbar/lib/constants'
 
 const Nav: React.FC = () => {
   const ContractUrl = () => {
-    return `https://etherscan.io/address/${contractAddresses.masterChef[1]}#code`
+    return `https://etherscan.io/address/${contractAddresses.Sommelier[1]}#code`
   }
   return (
     <StyledNav>

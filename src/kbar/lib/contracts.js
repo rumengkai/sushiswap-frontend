@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js/bignumber'
 import ERC20Abi from './abi/erc20.json'
-import MasterChefAbi from './abi/masterchef.json'
+import SommelierAbi from './abi/sommelier.json'
 import KbarAbi from './abi/kbar.json'
 import UNIV2PairAbi from './abi/uni_v2_lp.json'
 import WETHAbi from './abi/weth.json'
@@ -22,7 +22,7 @@ export class Contracts {
     this.defaultGasPrice = options.defaultGasPrice
 
     this.kbar = new this.web3.eth.Contract(KbarAbi)
-    this.masterChef = new this.web3.eth.Contract(MasterChefAbi)
+    this.Sommelier = new this.web3.eth.Contract(SommelierAbi)
     this.weth = new this.web3.eth.Contract(WETHAbi)
 
     this.pools = supportedPools.map((pool) =>
@@ -46,7 +46,7 @@ export class Contracts {
     }
 
     setProvider(this.kbar, contractAddresses.kbar[networkId])
-    setProvider(this.masterChef, contractAddresses.masterChef[networkId])
+    setProvider(this.Sommelier, contractAddresses.Sommelier[networkId])
     setProvider(this.weth, contractAddresses.weth[networkId])
 
     this.pools.forEach(
@@ -59,7 +59,7 @@ export class Contracts {
 
   setDefaultAccount(account) {
     this.kbar.options.from = account
-    this.masterChef.options.from = account
+    this.Sommelier.options.from = account
   }
 
   async callContractFunction(method, options) {

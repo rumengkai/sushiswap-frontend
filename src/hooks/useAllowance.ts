@@ -7,30 +7,30 @@ import { provider } from 'web3-core'
 import { Contract } from 'web3-eth-contract'
 
 import { getAllowance } from '../utils/erc20'
-import { getMasterChefContract } from '../kbar/utils'
+import { getSommelierContract } from '../kbar/utils'
 
 const useAllowance = (lpContract: Contract) => {
   const [allowance, setAllowance] = useState(new BigNumber(0))
   const { account }: { account: string; ethereum: provider } = useWallet()
   const kbar = useKbar()
-  const masterChefContract = getMasterChefContract(kbar)
+  const SommelierContract = getSommelierContract(kbar)
 
   const fetchAllowance = useCallback(async () => {
     const allowance = await getAllowance(
       lpContract,
-      masterChefContract,
+      SommelierContract,
       account,
     )
     setAllowance(new BigNumber(allowance))
-  }, [account, masterChefContract, lpContract])
+  }, [account, SommelierContract, lpContract])
 
   useEffect(() => {
-    if (account && masterChefContract && lpContract) {
+    if (account && SommelierContract && lpContract) {
       fetchAllowance()
     }
     let refreshInterval = setInterval(fetchAllowance, 10000)
     return () => clearInterval(refreshInterval)
-  }, [account, masterChefContract, lpContract])
+  }, [account, SommelierContract, lpContract])
 
   return allowance
 }

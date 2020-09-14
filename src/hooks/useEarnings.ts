@@ -4,7 +4,7 @@ import { provider } from 'web3-core'
 import BigNumber from 'bignumber.js'
 import { useWallet } from 'use-wallet'
 
-import { getEarned, getMasterChefContract } from '../kbar/utils'
+import { getEarned, getSommelierContract } from '../kbar/utils'
 import useKbar from './useKbar'
 import useBlock from './useBlock'
 
@@ -15,19 +15,19 @@ const useEarnings = (pid: number) => {
     ethereum,
   }: { account: string; ethereum: provider } = useWallet()
   const kbar = useKbar()
-  const masterChefContract = getMasterChefContract(kbar)
+  const SommelierContract = getSommelierContract(kbar)
   const block = useBlock()
 
   const fetchBalance = useCallback(async () => {
-    const balance = await getEarned(masterChefContract, pid, account)
+    const balance = await getEarned(SommelierContract, pid, account)
     setBalance(new BigNumber(balance))
-  }, [account, masterChefContract, kbar])
+  }, [account, SommelierContract, kbar])
 
   useEffect(() => {
-    if (account && masterChefContract && kbar) {
+    if (account && SommelierContract && kbar) {
       fetchBalance()
     }
-  }, [account, block, masterChefContract, setBalance, kbar])
+  }, [account, block, SommelierContract, setBalance, kbar])
 
   return balance
 }

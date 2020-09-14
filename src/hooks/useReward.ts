@@ -3,15 +3,15 @@ import { useCallback } from 'react'
 import useKbar from './useKbar'
 import { useWallet } from 'use-wallet'
 
-import { harvest, getMasterChefContract } from '../kbar/utils'
+import { harvest, getSommelierContract } from '../kbar/utils'
 
 const useReward = (pid: number) => {
   const { account } = useWallet()
   const kbar = useKbar()
-  const masterChefContract = getMasterChefContract(kbar)
+  const SommelierContract = getSommelierContract(kbar)
 
   const handleReward = useCallback(async () => {
-    const txHash = await harvest(masterChefContract, pid, account)
+    const txHash = await harvest(SommelierContract, pid, account)
     console.log(txHash)
     return txHash
   }, [account, pid, kbar])

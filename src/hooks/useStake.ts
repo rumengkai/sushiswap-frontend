@@ -3,7 +3,7 @@ import { useCallback } from 'react'
 import useKbar from './useKbar'
 import { useWallet } from 'use-wallet'
 
-import { stake, getMasterChefContract } from '../kbar/utils'
+import { stake, getSommelierContract } from '../kbar/utils'
 
 const useStake = (pid: number) => {
   const { account } = useWallet()
@@ -12,7 +12,7 @@ const useStake = (pid: number) => {
   const handleStake = useCallback(
     async (amount: string) => {
       const txHash = await stake(
-        getMasterChefContract(kbar),
+        getSommelierContract(kbar),
         pid,
         amount,
         account,

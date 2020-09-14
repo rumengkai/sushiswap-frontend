@@ -4,7 +4,7 @@ import { useWallet } from 'use-wallet'
 import useKbar from '../../hooks/useKbar'
 
 import { bnToDec } from '../../utils'
-import { getMasterChefContract, getEarned } from '../../kbar/utils'
+import { getSommelierContract, getEarned } from '../../kbar/utils'
 import { getFarms } from '../../kbar/utils'
 
 import Context from './context'

@@ -8,8 +8,8 @@ const Logo: React.FC = () => {
     <StyledLogo to="/">
       <img src={chef} height="32" style={{ marginTop: -4 }} />
       <StyledText>
-        {/* KbarSwap <MasterChefText>MasterChef</MasterChefText> */}
-        KbarSwap <MasterChefText>Sommelier</MasterChefText>
+        {/* KbarSwap <SommelierText>Sommelier</SommelierText> */}
+        KbarSwap <SommelierText>Sommelier</SommelierText>
       </StyledText>
     </StyledLogo>
   )
@@ -38,7 +38,7 @@ const StyledText = styled.span`
   }
 `
 
-const MasterChefText = styled.span`
+const SommelierText = styled.span`
   font-family: 'Kaushan Script', sans-serif;
 `
 

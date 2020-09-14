@@ -38,7 +38,7 @@ export class Kbar {
     }
     this.contracts = new Contracts(realProvider, networkId, this.web3, options)
     this.kbarAddress = contractAddresses.kbar[networkId]
-    this.masterChefAddress = contractAddresses.masterChef[networkId]
+    this.SommelierAddress = contractAddresses.Sommelier[networkId]
     this.wethAddress = contractAddresses.weth[networkId]
   }
 

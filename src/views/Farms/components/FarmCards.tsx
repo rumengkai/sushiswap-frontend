@@ -15,7 +15,7 @@ import useAllStakedValue, {
 } from '../../../hooks/useAllStakedValue'
 import useFarms from '../../../hooks/useFarms'
 import useKbar from '../../../hooks/useKbar'
-import { getEarned, getMasterChefContract } from '../../../kbar/utils'
+import { getEarned, getSommelierContract } from '../../../kbar/utils'
 import { bnToDec } from '../../../utils'
 
 interface FarmWithStakedValue extends Farm, StakedValue {
@@ -113,7 +113,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
     async function fetchEarned() {
       if (kbar) return
       const earned = await getEarned(
-        getMasterChefContract(kbar),
+        getSommelierContract(kbar),
         lpTokenAddress,
         account,
       )

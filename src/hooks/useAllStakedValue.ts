@@ -6,7 +6,7 @@ import { useWallet } from 'use-wallet'
 import { Contract } from 'web3-eth-contract'
 
 import {
-  getMasterChefContract,
+  getSommelierContract,
   getWethContract,
   getFarms,
   getTotalLPWethValue,
@@ -27,7 +27,7 @@ const useAllStakedValue = () => {
   const { account }: { account: string; ethereum: provider } = useWallet()
   const kbar = useKbar()
   const farms = getFarms(kbar)
-  const masterChefContract = getMasterChefContract(kbar)
+  const SommelierContract = getSommelierContract(kbar)
   const wethContact = getWethContract(kbar)
   const block = useBlock()
 
@@ -44,7 +44,7 @@ const useAllStakedValue = () => {
           tokenContract: Contract
         }) => {
           return getTotalLPWethValue(
-            masterChefContract,
+            SommelierContract,
             wethContact,
             lpContract,
             tokenContract,
@@ -54,13 +54,13 @@ const useAllStakedValue = () => {
       ),
     )
     setBalance(balances)
-  }, [account, masterChefContract, kbar])
+  }, [account, SommelierContract, kbar])
 
   useEffect(() => {
-    if (account && masterChefContract && kbar) {
+    if (account && SommelierContract && kbar) {
       fetchAllStakedValue()
     }
-  }, [account, block, masterChefContract, setBalance, kbar])
+  }, [account, block, SommelierContract, setBalance, kbar])
 
   return balances
 }

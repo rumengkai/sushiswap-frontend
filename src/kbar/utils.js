@@ -13,8 +13,8 @@ const GAS_LIMIT = {
   },
 }
 
-export const getMasterChefAddress = (kbar) => {
-  return kbar && kbar.masterChefAddress
+export const getSommelierAddress = (kbar) => {
+  return kbar && kbar.SommelierAddress
 }
 export const getKbarAddress = (kbar) => {
   return kbar && kbar.kbarAddress
@@ -23,8 +23,8 @@ export const getWethContract = (kbar) => {
   return kbar && kbar.contracts && kbar.contracts.weth
 }
 
-export const getMasterChefContract = (kbar) => {
-  return kbar && kbar.contracts && kbar.contracts.masterChef
+export const getSommelierContract = (kbar) => {
+  return kbar && kbar.contracts && kbar.contracts.Sommelier
 }
 export const getKbarContract = (kbar) => {
   return kbar && kbar.contracts && kbar.contracts.kbar
@@ -61,21 +61,21 @@ export const getFarms = (kbar) => {
     : []
 }
 
-export const getPoolWeight = async (masterChefContract, pid) => {
-  const { allocPoint } = await masterChefContract.methods.poolInfo(pid).call()
-  const totalAllocPoint = await masterChefContract.methods
+export const getPoolWeight = async (SommelierContract, pid) => {
+  const { allocPoint } = await SommelierContract.methods.poolInfo(pid).call()
+  const totalAllocPoint = await SommelierContract.methods
     .totalAllocPoint()
     .call()
   console.log('totalAllocPoint', totalAllocPoint)
   return new BigNumber(allocPoint).div(new BigNumber(totalAllocPoint))
 }
 
-export const getEarned = async (masterChefContract, pid, account) => {
-  return masterChefContract.methods.pendingKbar(pid, account).call()
+export const getEarned = async (SommelierContract, pid, account) => {
+  return SommelierContract.methods.pendingKbar(pid, account).call()
 }
 
 export const getTotalLPWethValue = async (
-  masterChefContract,
+  SommelierContract,
   wethContract,
   lpContract,
   tokenContract,
@@ -89,9 +89,9 @@ export const getTotalLPWethValue = async (
 
   const tokenDecimals = await tokenContract.methods.decimals().call()
 
-  // Get the share of lpContract that masterChefContract owns
+  // Get the share of lpContract that SommelierContract owns
   const balance = await lpContract.methods
-    .balanceOf(masterChefContract.options.address)
+    .balanceOf(SommelierContract.options.address)
     .call()
   // Convert that into the portion of total lpContract = p1
   const totalSupply = await lpContract.methods.totalSupply().call()
@@ -117,7 +117,7 @@ export const getTotalLPWethValue = async (
     wethAmount,
     totalWethValue: totalLpWethValue.div(new BigNumber(10).pow(18)),
     tokenPriceInWeth: wethAmount.div(tokenAmount),
-    poolWeight: await getPoolWeight(masterChefContract, pid),
+    poolWeight: await getPoolWeight(SommelierContract, pid),
   }
   // } catch (error) {
   //   console.log('error', error)
@@ -131,9 +131,9 @@ export const getTotalLPWethValue = async (
   // }
 }
 
-export const approve = async (lpContract, masterChefContract, account) => {
+export const approve = async (lpContract, SommelierContract, account) => {
   return lpContract.methods
-    .approve(masterChefContract.options.address, ethers.constants.MaxUint256)
+    .approve(SommelierContract.options.address, ethers.constants.MaxUint256)
     .send({ from: account })
 }
 
@@ -141,8 +141,8 @@ export const getKbarSupply = async (kbar) => {
   return new BigNumber(await kbar.contracts.kbar.methods.totalSupply().call())
 }
 
-export const stake = async (masterChefContract, pid, amount, account) => {
-  return masterChefContract.methods
+export const stake = async (SommelierContract, pid, amount, account) => {
+  return SommelierContract.methods
     .deposit(
       pid,
       new BigNumber(amount).times(new BigNumber(10).pow(18)).toString(),
@@ -154,8 +154,8 @@ export const stake = async (masterChefContract, pid, amount, account) => {
     })
 }
 
-export const unstake = async (masterChefContract, pid, amount, account) => {
-  return masterChefContract.methods
+export const unstake = async (SommelierContract, pid, amount, account) => {
+  return SommelierContract.methods
     .withdraw(
       pid,
       new BigNumber(amount).times(new BigNumber(10).pow(18)).toString(),
@@ -166,8 +166,8 @@ export const unstake = async (masterChefContract, pid, amount, account) => {
       return tx.transactionHash
     })
 }
-export const harvest = async (masterChefContract, pid, account) => {
-  return masterChefContract.methods
+export const harvest = async (SommelierContract, pid, account) => {
+  return SommelierContract.methods
     .deposit(pid, '0')
     .send({ from: account })
     .on('transactionHash', (tx) => {
@@ -176,9 +176,9 @@ export const harvest = async (masterChefContract, pid, account) => {
     })
 }
 
-export const getStaked = async (masterChefContract, pid, account) => {
+export const getStaked = async (SommelierContract, pid, account) => {
   try {
-    const { amount } = await masterChefContract.methods
+    const { amount } = await SommelierContract.methods
       .userInfo(pid, account)
       .call()
     return new BigNumber(amount)
@@ -187,10 +187,10 @@ export const getStaked = async (masterChefContract, pid, account) => {
   }
 }
 
-export const redeem = async (masterChefContract, account) => {
+export const redeem = async (SommelierContract, account) => {
   let now = new Date().getTime() / 1000
   if (now >= 1597172400) {
-    return masterChefContract.methods
+    return SommelierContract.methods
       .exit()
       .send({ from: account })
       .on('transactionHash', (tx) => {
