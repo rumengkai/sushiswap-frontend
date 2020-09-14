@@ -6,3 +6,4 @@ build/
 .git
 
 build_spawn.sh
+build*.sh
