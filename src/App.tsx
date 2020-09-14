@@ -49,16 +49,22 @@ const App: React.FC = () => {
 }
 
 const Providers: React.FC = ({ children }) => {
+
+  let chainId = 3  // 1：正式公网，3：测试网
+
+  const rpcUrl = () => {
+    if (chainId === 1) {
+      return 'https://mainnet.eth.aragon.network/'
+    } else {
+      return 'https://api.infura.io/v1/jsonrpc/ropsten'
+    }
+  }
   return (
     <ThemeProvider theme={theme}>
       <UseWalletProvider
-        chainId={3}
+        chainId={chainId}
         connectors={{
-          // walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
-          // walletconnect: { rpcUrl: 'https://ropsten.eth.aragon.network/' },
-          // walletconnect: { rpcUrl: 'https://rinkeby.eth.aragon.network/' },
-          // walletconnect: { rpcUrl: 'https://faucet.ropsten.be/' },
-          walletconnect: { rpcUrl: 'https://api.infura.io/v1/jsonrpc/ropsten' },
+          walletconnect: { rpcUrl: rpcUrl() },
         }}
       >
         <KbarProvider>
