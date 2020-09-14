@@ -67,7 +67,7 @@ UNI-V2 LP Address on mainnet for reference
 export const contractAddresses = {
   lpAddresses: {
     1: '0x66d6dcdf72125c2f6a4039567076376ec6e2f324',
-    3: '0x6d830e1733e2ed28446db425a471bd2a99d13c7e',
+    3: '0x6d4775cb9a038943bfcb9ac9e846c515c8839b0f',
   },
   kbar: {
     1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
