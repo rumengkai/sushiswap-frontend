@@ -71,11 +71,11 @@ export const contractAddresses = {
   },
   kbar: {
     1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
-    3: '0xd3807f2265c1004523e75b849d3552c4eb4bbe53',
+    3: '0x22073a445dde462fd6d2c88606f501aca8a50cb6',
   },
   Sommelier: {
     1: '0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d',
-    3: '0x03810cc674c33174702254ca8ffa9ef20d8df312',
+    3: '0xec7555fcf7d6c1f3eab9aa02ae05e5038e4064f8',
   },
   weth: {
     1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
@@ -103,11 +103,11 @@ export const supportedPools = [
     pid: 0,
     lpAddresses: {
       1: '0x0a24adf229e7b3271d314aa934749dd454029959',
-      3: '0xe7992cfb9f8032ce8de2f0067aff9870b1ea9c6e',
+      3: '0x15c3c4147a862bbb56b46806a94719d72da410dd',
     },
     tokenAddresses: {
       1: '0x8d18f76d1F87A7347A74f957052f414472945BE4',
-      3: '0xf7143858dcbb36b08fc2dbb2deb9253b4203e12a',
+      3: '0x2d19a1cdb141df4c800b4ffeb466042e6a25c524',
     },
     name: 'Kompass Soju ',
     symbol: 'KOMP-ETH UNI-V2 LP',
