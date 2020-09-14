@@ -46,25 +46,6 @@ export const addressMap = {
 //     kovan:'0xd0A1E359811322d97991E03f863a0C30C2cF029C'
 // }
 
-export const contractAddresses = {
-  kbar: {
-    1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
-    3: '0xd3807f2265c1004523e75b849d3552c4eb4bbe53',
-  },
-  masterChef: {
-    1: '0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d',
-    3: '0x03810cc674c33174702254ca8ffa9ef20d8df312',
-  },
-  lpAddresses: {
-    1: '0x66d6dcdf72125c2f6a4039567076376ec6e2f324',
-    3: '0x6d830e1733e2ed28446db425a471bd2a99d13c7e',
-  },
-  weth: {
-    1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
-    3: '0xc778417E063141139Fce010982780140Aa0cD5Ab',
-  },
-}
-
 /*
 UNI-V2 LP Address on mainnet for reference
 ==========================================
@@ -82,6 +63,25 @@ UNI-V2 LP Address on mainnet for reference
 11 YFI  0x2fdbadf3c4d5a8666bc06645b8358ab803996e28
 12 KBAR 0xce84867c3c02b05dc570d0135103d3fb9cc19433
 */
+
+export const contractAddresses = {
+  lpAddresses: {
+    1: '0x66d6dcdf72125c2f6a4039567076376ec6e2f324',
+    3: '0x6d830e1733e2ed28446db425a471bd2a99d13c7e',
+  },
+  kbar: {
+    1: '0x451c2220a761dc5759e5c6d17bd28a568318a26b',
+    3: '0xd3807f2265c1004523e75b849d3552c4eb4bbe53',
+  },
+  masterChef: {
+    1: '0xa0fd402bacd5fa935f4acfede486ac32c87d3b9d',
+    3: '0x03810cc674c33174702254ca8ffa9ef20d8df312',
+  },
+  weth: {
+    1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    3: '0xc778417E063141139Fce010982780140Aa0cD5Ab',
+  },
+}
 
 export const supportedPools = [
   {
