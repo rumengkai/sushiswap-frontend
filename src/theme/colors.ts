@@ -2,7 +2,7 @@ export const white = '#FFF'
 export const black = '#000'
 
 export const green = {
-  500: '##00d1810',
+  500: '#00d1810',
 }
 
 export const red = {

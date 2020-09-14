@@ -12,7 +12,7 @@ interface PageHeaderProps {
 const PageHeader: React.FC<PageHeaderProps> = ({ icon, subtitle, title }) => {
   const Title = () => {
     if (title.indexOf('Sommelier') > -1) {
-      return (<StyledTitle>You <StyledTitleSpan>Sommelier</StyledTitleSpan> is ready</StyledTitle>)
+      return (<StyledTitle>Your <StyledTitleSpan>Sommelier</StyledTitleSpan> is ready</StyledTitle>)
     } else {
       return (<StyledTitle>{title}</StyledTitle>)
     }
@@ -48,7 +48,7 @@ const StyledIcon = styled.div`
 
 const StyledTitleSpan = styled.h1`
   font-family: 'Kaushan Script', sans-serif;
-  color: ${(props) => props.theme.color.grey[600]};
+  color: ${(props) => props.theme.color.white};
   font-size: 36px;
   font-weight: 700;
   margin-right:10px;
@@ -57,7 +57,7 @@ const StyledTitleSpan = styled.h1`
 `
 const StyledTitle = styled.div`
   /* font-family: 'Kaushan Script', sans-serif; */
-  color: ${(props) => props.theme.color.grey[600]};
+  color: ${(props) => props.theme.color.white};
   font-size: 36px;
   font-weight: 700;
   line-height: 80px;
@@ -66,7 +66,7 @@ const StyledTitle = styled.div`
 `
 
 const StyledSubtitle = styled.h3`
-  color: ${(props) => props.theme.color.grey[400]};
+  color: ${(props) => props.theme.color.white};
   font-size: 18px;
   font-weight: 400;
   margin: 0;

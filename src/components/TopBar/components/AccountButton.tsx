@@ -41,6 +41,9 @@ const StyledAccountButton = styled.div`
     justify-content: center;
     width: auto;
   }
+  button{
+    box-shadow:none;
+  }
 `
 
 export default AccountButton

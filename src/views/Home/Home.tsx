@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     <Page>
       <PageHeader
         icon={<img src={chef} height={120} />}
-        title="You Sommelier is ready"
+        title="Your Sommelier is ready"
         subtitle="Stake UniSwap LP tokens to claim your very own yummy KBAR!"
       />
 
@@ -35,13 +35,11 @@ const Home: React.FC = () => {
       <Spacer size="lg" />
       {tip()}
       <Spacer size="lg" />
-      <div
-        style={{
-          margin: '0 auto',
-        }}
-      >
-        <Button text="🪑 See the Menu" to="/farms" variant="secondary" />
-      </div>
+      <ButtonWrap>
+        <Button
+          text="🪑 See the Menu" to="/farms" variant="secondary" />
+
+      </ButtonWrap>
     </Page>
   )
 }
@@ -56,6 +54,13 @@ const StyledInfo = styled.h3`
 
   > b {
     color: ${(props) => props.theme.color.grey[600]};
+  }
+`
+
+const ButtonWrap = styled.div`
+  margin: 0 auto;
+  button{
+    box-shadow: none;
   }
 `
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import { useWallet } from 'use-wallet'
+import styled from 'styled-components'
 
 import chef from '../../assets/img/chef.png'
 
@@ -45,15 +46,22 @@ const Farms: React.FC = () => {
                 justifyContent: 'center',
               }}
             >
-              <Button
-                onClick={onPresentWalletProviderModal}
-                text="🔓 Unlock Wallet"
-              />
+              <ButtonWarp>
+                <Button
+                  onClick={onPresentWalletProviderModal}
+                  text="🔓 Unlock Wallet"
+                />
+              </ButtonWarp>
             </div>
           )}
       </Page>
     </Switch>
   )
 }
+const ButtonWarp = styled.div`
+  button{
+    box-shadow: none;
+  }
+`
 
 export default Farms
